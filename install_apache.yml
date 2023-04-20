@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: repository frissites
+    apt:
+      update_cache: yes
+
+  - name: apache2 telepites
+    apt:
+      name: apache2
+      state: latest
+
+  - name: php support telepites
+    apt:
+      name: libapache2-mod-php
+      state: latest

@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: repository frissites
+    apt:
+      update_cache: yes
+
+  - name: apache2 torles
+    apt:
+      name: apache2
+      state: absent
+
+  - name: php support torles
+    apt:
+      name: libapache2-mod-php
+      state: absent
