@@ -4,16 +4,14 @@
   become: true
   tasks:
 
-  - name: repository frissites
+  - name: frissites es apache2-php telepites
     apt:
+      name: 
+        - "{{ apache_package }}"
+        - "{{ php_package }}"
+#        - apache2
+#        - libapache2-mod-php
+      state: latest
       update_cache: yes
-
-  - name: apache2 telepites
-    apt:
-      name: apache2
-      state: latest
-
-  - name: php support telepites
-    apt:
-      name: libapache2-mod-php
-      state: latest
+    when: ansible_distribution in ["Debian", "Ubuntu", "Zorin OS"]
+#    when: ansible_distribution == "Debian"

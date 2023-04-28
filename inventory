@@ -1,6 +1,12 @@
+192.168.122.245
+192.168.122.236
+127.0.0.1
+
 [servers]
-192.168.122.245	ansible_connection=ssh	ansible_user=drgon ansible_port=22022
-192.168.122.236 ansible_connection=ssh  ansible_user=drgon
+192.168.122.245	ansible_connection=ssh	ansible_user=drgon ansible_port=22022 apache_package=apache2 php_package=libapache2-mod-php
+192.168.122.236 ansible_connection=ssh  ansible_user=drgon ansible_port=22 apache_package=apache2 php_package=libapache2-mod-php
+127.0.0.1 ansible_connection=ssh  ansible_user=drgon ansible_port=22 apache_package=apache2 php_package=libapache2-mod-php
+
 
 [deb1]
 192.168.122.245
